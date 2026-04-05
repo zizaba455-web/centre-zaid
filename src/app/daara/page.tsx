@@ -119,7 +119,7 @@ export default function DaaraPage() {
                 <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                   <div
                     className={`h-full rounded-full transition-all ${e.atteint ? 'bg-[#2d6a2d]' : 'bg-red-400'}`}
-                    style={{width: `${(e.juz / 30) * 100}%`}}
+                    style={{width: `${((e.juz ?? 0) / 30) * 100}%`}}
                   />
                 </div>
               </div>
