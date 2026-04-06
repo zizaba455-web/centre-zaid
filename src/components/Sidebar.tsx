@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   { section: 'Principal' },
   { href: '/dashboard', label: 'Tableau de bord', icon: '◈' },
-  { href: '/eleves', label: 'Élèves', icon: '◉' },
+  { href: '/inscriptions', label: 'Inscriptions', icon: '◉' },
   { href: '/presences/eleves', label: 'Présences élèves', icon: '◎' },
   { href: '/presences/profs', label: 'Présences profs', icon: '◈' },
   { href: '/finance', label: 'Finance & caisse', icon: '◉', badge: '3' },
@@ -23,7 +23,6 @@ export default function Sidebar() {
 
   return (
     <aside className="w-56 bg-[#1a2818] fixed top-0 left-0 h-screen flex flex-col z-50">
-      {/* Logo */}
       <div className="p-4 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-[#c8961a] flex items-center justify-center text-[#1a2818] font-bold text-sm flex-shrink-0">
@@ -43,7 +42,6 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Nav */}
       <nav className="flex-1 p-2 overflow-y-auto">
         {navItems.map((item, i) => {
           if ('section' in item) {
@@ -76,7 +74,6 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Footer */}
       <div className="p-3 border-t border-white/5">
         <div className="flex items-center gap-2 p-2">
           <div className="w-7 h-7 rounded-full bg-[#2d6a2d] flex items-center justify-center text-white text-[10px] font-semibold">
